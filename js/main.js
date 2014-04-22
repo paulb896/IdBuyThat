@@ -62,6 +62,8 @@ app.controller('productCreation', ['$scope', 'PageState', 'Product', 'ProductLis
   };
 
   $scope.addProduct = function(product) {
+    product.votesToPurchase = 0;
+    product.votesTotal = 0;
     Product.create({}, product);
   };
 }]);
