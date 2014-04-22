@@ -1,0 +1,67 @@
+body{
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+input{
+    padding-left: 5px;
+}
+.description-input{
+    width: 400px;
+    height: 100px;
+    padding: 5px;
+    font-family: "helvetica neue",arial,sans-serif;
+}
+
+.explanation{
+    width: 500px;
+}
+
+.products{
+    list-style: none;
+}
+
+.products > li{
+    border-right: solid lightgray 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 400px;
+    display: inline-table;
+}
+
+.product-add-input{
+    font-weight: 800;
+    cursor: pointer;
+    width: 200px;
+}
+
+.vote-yes:hover{
+    border-color: green;
+    color: green;
+}
+
+.vote-yes{
+    height: 50px;
+    width: 48%;
+    font-size: 90%;
+    font-weight: 900;
+    cursor: pointer;
+    border: solid lightgrey 3px;
+}
+
+.vote-no{
+    height: 50px;
+    width: 48%;
+    font-size: 90%;
+    font-weight: 900;
+    color: grey;
+    cursor: pointer;
+    border: solid lightgrey 3px;
+    float:right;
+}
+
+.vote-no:hover{
+    border-color: red;
+    color: red;
+}

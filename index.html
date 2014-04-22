@@ -1,0 +1,50 @@
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>I'd Buy That</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body ng-app="IdBuyThat">
+        <div class="explanation">
+            <h1>I'd Buy That - Vote on Products & Concepts</h1>
+            <p>A collection of products and concepts, in which a user can vote whether or not they would pay the suggested retail price</p>
+        </div>
+
+        <div ng-controller="voteController" ng-init="initialize()">
+            <h2>Would you buy these products if they were coming out in a few months?</h2>
+            <ul class="products">
+                <li ng-repeat="product in products">
+                    <span ng-bind="product.name"></span>
+                    <p ng-bind="product.description"></p>
+                    <p ng-bind='product.price | currency:"$"'></p>
+                    <span ng-bind='product.votesToPurchase'></span><span> user<span ng-show="product.votesToPurchase > 1">s</span> that would purchase this product</span>
+                    <p>Interest <span ng-bind='product.votesToPurchase/product.votesTotal | number:2'></span>%</p>
+                    <button class="vote-yes" ng-click="voteToPurchaseProduct(product)">I'd Buy That</button>
+                    <button class="vote-no" ng-click="voteToNotPurchaseProduct(product)">Not Interested</button>
+                </li>
+            </ul>
+        </div>
+
+        <div ng-controller="productCreation" ng-init="initialize()">
+            <h2>Have an idea?</h2>
+            <table>
+                <tr>
+                    <td>Product or Concept Name</td><td><input placeholder="Ex. BlueToothBrush" ng-model="newProduct.name"/></td>
+                </tr>
+                <tr>
+                    <td>Elevator Pitch</td><td><textarea class="description-input" ng-model="newProduct.description" placeholder="A bluetoothbrush fits around most standard toothbrushes, and allows you to wirelessly connect to your smart phone for brush tracking. Brush will include with free android/iphone brush tracking app."></textarea></td>
+                </tr>
+                <tr>
+                    <td>Approximate Price</td><td><input placeholder="9.99" ng-model="newProduct.price"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="product-add-input" ng-click="addProduct(newProduct)">Add Product</button></td>
+                </tr>
+            </table>
+        </div>
+        <script src="js/external/angular.min.js"></script>
+        <script src="js/external/angular-route.min.js"></script>
+        <script src="js/external/angular-resource.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
