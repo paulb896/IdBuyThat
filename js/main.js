@@ -2,14 +2,7 @@ var app = angular.module('IdBuyThat', ['ngResource', 'ngRoute']);
 // Models
 app.factory('PageState', function(){
   return {
-    products:[{
-      name:"Super Bouncy Slinky",
-      description:"Slinky that bounces, made of elastic rubber, also goes up and down stairs",
-      price:5.99,
-      votesTotal:11,
-      votesToPurchase:1,
-      id:1
-    }]
+    products:[]
   };
 });
 

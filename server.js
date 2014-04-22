@@ -56,8 +56,8 @@ app.get('/products', function(req, res){
 
     collection.find().toArray(function(err, results) {
 
-      var products = {results:JSON.stringify(results), lastCount:productCount}
-      res.end();
+      var products = {results:results, lastCount:productCount}
+      res.json(products);
       // Let's close the db
       db.close();
     });
