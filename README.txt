@@ -1,3 +1,66 @@
+
+
+I'd Buy That
+=============
+
+Product Search and Creation
+
+
+## Dependencies
+
+- node.js (http://nodejs.org/download/)
+- npm (included with node.js)
+
+## Getting Started
+
+In the command prompt:
+
+Clone the repository:
+```
+
+ git clone https://github.com/paulb896/IdBuyThat
+
+```
+
+In the IdBuyThat directory:
+```
+
+ npm install
+
+```
+
+Start server:
+```
+
+ node server
+
+```
+
+##Database
+
+###Starting the Database
+
+```
+sudo mongod -port 3001
+```
+
+###Connect to Database
+
+```
+mongo -host 127.0.0.1:3001
+```
+
+###View Reservations
+
+```
+use reservation_system;
+db.reservation.find();
+```
+
+
+Project Specs
+
+
 I'd buy that
  - Poll of interest
  - verify with google

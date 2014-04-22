@@ -5,7 +5,7 @@ app = express(),
 MongoClient = require('mongodb').MongoClient,
 config={
     serverPort:8112,
-    dbHost:"mongodb://192.168.1.77:3001"
+    dbHost:"mongodb://127.0.0.1:3001"
 };
 
 
