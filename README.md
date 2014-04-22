@@ -50,15 +50,16 @@ sudo mongod -port 3001
 mongo -host 127.0.0.1:3001
 ```
 
-### View Reservations
+### View Products
 
 ```
-use reservation_system;
-db.reservation.find();
+use admin;
+db.product.find();
 ```
 
 
-Project Specs
+
+# Project Specs
 
 
 I'd buy that
