@@ -1,21 +1,59 @@
 body{
     font-family: Calibri, Helvetica, Arial, sans-serif;
-    margin-left: 50px;
-    margin-top: 50px;
+    padding-left: 10%;
+    margin-top: 20px;
+    font-family: "lucida grande";
+
+    -ms-touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+table > tbody {
+    text-align: center;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 250%;
+    text-align: center;
+}
+
+h2{
+    border-top:solid rgba(200,200,200, 0.5) 1px;
+    padding: 20px 0 10px;
+    width: 50%;
+    right: 50%;
+    text-align: center;
 }
 
 input{
     padding-left: 5px;
 }
+
+td > input{
+    margin: 0;
+}
+
+
+
 .description-input{
-    width: 400px;
-    height: 100px;
+    width: 408px;
+    height: 200px;
     padding: 5px;
     font-family: "helvetica neue",arial,sans-serif;
 }
 
 .explanation{
     width: 500px;
+    margin-left: 6%;
+}
+
+.new-product-details{
+    list-style-type: none;
+}
+.new-product-details > li{
+    display: table-caption;
 }
 
 .products{
@@ -30,10 +68,42 @@ input{
     display: inline-table;
 }
 
+.product-canvas{
+    width: 1200px;
+    height: 500px;
+    cursor: pointer;
+    background-color: #1f3972;
+}
+
 .product-add-input{
+    opacity: 0.9;
     font-weight: 800;
     cursor: pointer;
     width: 200px;
+    height: 50px;
+    border: solid white 2px;
+    float: right;
+    margin-right: 20%;
+}
+
+.product-add-input:hover{
+    opacity: 1;
+    color: rgba(10, 100, 10, 0.9);
+    font-weight: 900;
+    font-size: 95%;
+}
+
+.product-add-input:disabled{
+    opacity: 0.2;
+}
+
+.toggle-eraser{
+    font-size: 150%;
+    cursor: pointer;
+}
+
+.toggle-eraser:hover{
+    font-weight: 800;
 }
 
 .vote-yes:hover{
