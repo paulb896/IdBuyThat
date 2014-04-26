@@ -1,6 +1,6 @@
 body{
     font-family: Calibri, Helvetica, Arial, sans-serif;
-    padding-left: 10%;
+    padding-left: 3%;
     margin-top: 20px;
     font-family: "lucida grande";
 
@@ -66,13 +66,15 @@ td > input{
     padding-right: 10px;
     width: 400px;
     display: inline-table;
+    margin-top: 25px;
 }
 
 .product-canvas{
-    width: 1200px;
-    height: 500px;
+    width: 720px;
+    height: 300px;
     cursor: pointer;
     background-color: #1f3972;
+    box-shadow: 5px 2px 20px rgba(50,50,50,0.8) inset;
 }
 
 .product-add-input{

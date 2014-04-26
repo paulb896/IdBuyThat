@@ -18,21 +18,22 @@ In the command prompt:
 Clone the repository:
 ```
 
- git clone https://github.com/paulb896/IdBuyThat
+ > git clone https://github.com/paulb896/IdBuyThat
 
 ```
 
 In the IdBuyThat directory:
 ```
 
- npm install
+ > npm install
+ > node node_modules/bower/bin/bower install
 
 ```
 
 Start server:
 ```
 
- node server
+ > node server
 
 ```
 
@@ -41,13 +42,13 @@ Start server:
 ### Starting the Database
 
 ```
-sudo mongod -port 3001
+ > sudo mongod -port 3001
 ```
 
 ### Connect to Database
 
 ```
-mongo -host 127.0.0.1:3001
+ > mongo -host 127.0.0.1:3001
 ```
 
 ### View Products

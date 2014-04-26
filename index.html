@@ -10,7 +10,6 @@
     <body ng-app="IdBuyThat">
         <div class="explanation">
             <h1>I'd Buy That - Vote on Products & Concepts</h1>
-            <p>A collection of products and concepts</p>
         </div>
 
         <div ng-controller="voteController" ng-init="initialize()">
@@ -22,6 +21,7 @@
                     <p ng-bind='product.price | currency:"$"'></p>
                     <p ng-show="product.votesToPurchase"><span ng-bind='product.votesToPurchase'></span><span> user<span ng-show="product.votesToPurchase > 1">s</span> that would purchase this product</span></p>
                     <p ng-show="product.votesTotal">Interest <span ng-bind='product.votesToPurchase/product.votesTotal * 100 | number:2'></span> %</p>
+                    <canvas canvasimage="{{product.imageBase64}}" class="product-canvas"></canvas>
                     <button class="vote-yes" ng-click="voteToPurchaseProduct(product)">I'd Buy That</button>
                     <button class="vote-no" ng-click="voteToNotPurchaseProduct(product)">Not Interested</button>
                 </li>
@@ -38,7 +38,7 @@
                     <div>
                         What's your idea?
                     </div>
-                   <textarea class="description-input" ng-model="newProduct.description" placeholder="A bluetoothbrush fits around most standard toothbrushes, and allows you to wirelessly connect to your smart phone for brush tracking. Brush will include with free android/iphone brush tracking app."></textarea>
+                   <textarea class="description-input" n spellcheck="true" ng-model="newProduct.description" placeholder="A bluetoothbrush fits around most standard toothbrushes, and allows you to wirelessly connect to your smart phone for brush tracking. Brush will include with free android/iphone brush tracking app."></textarea>
                 </li>
                 <li>
                     Approximate Price : <input placeholder="9.99" ng-model="newProduct.price"/>
@@ -57,6 +57,9 @@
         <script src="js/external/angular/angular.min.js"></script>
         <script src="js/external/angular-route/angular-route.min.js"></script>
         <script src="js/external/angular-resource/angular-resource.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/services.js"></script>
     </body>
 </html>

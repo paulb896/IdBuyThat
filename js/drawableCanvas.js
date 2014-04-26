@@ -1,3 +1,9 @@
+;
+/**
+ * Uses EaselJS and CreateJS to create an editable canvas.
+ *
+ * public_methods: [draw,toggle]
+ */
 var drawableCanvas = (function () {
     var canvas, stage;
     var drawingCanvas;
