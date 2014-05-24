@@ -2,7 +2,6 @@
   "name": "IdBuyThat",
   "description": "Product Voting Server",
   "version": "0.0.2",
-  "private": true,
   "repository" :
   { "type" : "git"
     , "url" : "http://github.com/npm/npm.git"
